@@ -1,3 +1,53 @@
 body {
-  background-color: dodgerblue;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Futura';
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+li {
+  width: auto;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+form {
+  padding: 20px;
+  background-color: #CDE5FF;
+  border: 2px ridge;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  margin: 0 10px;
+}
+.radio-buttons {
+  margin: 10px;
+}
+
+li.high {
+  border: 2px inset #E31C1C;
+  background-color: #FF7F7F;
+}
+
+li.normal {
+  background-color:
+#a1ff99;
+  border: 2px inset green;
+}
+
+li.low {
+  color: grey;
+  background-color: #ececec;
+  border: 2px inset #cecdcb;
 }
