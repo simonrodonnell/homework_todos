@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Todo List</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/bundle.js"></script>
-  </head>
-  <body>
-    <div id="app">
-      <ul>
-        <li v-for="(item, index) in items" :class="item.priority">
-          <span>{{item.taskName}}</span>
-        </li>
-      </ul>
-      <form v-on:submit.prevent="addNewItem">
-        <label for="new-item">Add new to-do</label>
-        <input id="new-item" type="text" v-model="newItem">
+<head>
+  <meta charset="utf-8">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/bundle.js"></script>
+</head>
+<body>
+  <div id="app">
+    <form v-on:submit.prevent="addNewItem">
+      <label for="new-item">Add new to-do</label>
+      <input id="new-item" type="text" v-model="newItem">
 
-        <div class="radio-buttons">
+      <div class="radio-buttons">
         <input type="radio" id="high" name="priority" value="high" v-model="newItemPriority">
         <label for="high">High</label>
 
@@ -28,8 +23,14 @@
         <label for="low">Low</label>
       </div>
 
-        <input type="submit" value="Add new item">
-      </form>
-    </div>
-  </body>
+      <input type="submit" value="Add new item">
+    </form>
+    
+    <ul>
+      <li v-for="(item, index) in items" :class="item.priority">
+        <span>{{item.taskName}}</span>
+      </li>
+    </ul>
+  </div>
+</body>
 </html>
